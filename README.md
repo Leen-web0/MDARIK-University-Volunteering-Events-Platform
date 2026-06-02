@@ -6,7 +6,7 @@ MDARIK is a university-based web platform that connects students, faculty, and c
 
 ---
 <div align="center">
-<img src="https://i.pinimg.com/originals/6d/be/77/6dbe776fb412b0ade2600846d434c669.gif" alt="Workspace" width="60%"/>
+<img src="https://i.pinimg.com/originals/6d/be/77/6dbe776fb412b0ade2600846d434c669.gif" alt="Workspace" width="80%"/>
 </div>
 ## 🌐 Live Preview
 
