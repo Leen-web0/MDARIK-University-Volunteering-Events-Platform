@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maintenance Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="maintenance.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">
+    <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+  </div>
+  <a href="../index.html"><i class="fas fa-home"></i> Home page</a>
+  <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+  <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+  <a href="usermanage.html"><i class="fas fa-users-cog"></i> User Manage</a>
+  <a href="roles.html"><i class="fas fa-user-lock"></i> Roles & Permissions</a>
+  <a href="settings.html"><i class="fas fa-sliders-h"></i> System Settings</a>
+  <a href="View_Logs.html"><i class="fas fa-file-alt"></i> View Logs</a>
+  <a href="maintenance.html" class="active"><i class="fas fa-tools"></i> Maintenance Tools</a>
+  <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+  <div class="topbar">
+    <h1>Maintenance Tools</h1>
+    <a href="../index.html"><button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Log out</button></a>
+  </div>
+
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4>Manage Maintenance Tools</h4>
+      <button class="btn btn-success" onclick="addTool()"><i class="fas fa-plus-circle"></i> Add New Tool</button>
+    </div>
+
+    <input class="form-control search-input" id="searchInput" type="text" placeholder="Search by tool name" onkeyup="searchTool()">
+
+    <table class="table table-bordered table-striped maintenance-table">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Tool Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="toolTable">
+        <!-- Demo data -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Edit Tool Modal -->
+<div class="modal fade" id="editToolModal" tabindex="-1" role="dialog" aria-labelledby="editToolModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editToolModalLabel">Edit Tool</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="editToolForm">
+          <div class="form-group">
+            <label for="toolName">Tool Name</label>
+            <input type="text" class="form-control" id="toolName" required>
+          </div>
+          <div class="form-group">
+            <label for="toolDescription">Description</label>
+            <textarea class="form-control" id="toolDescription" rows="3" required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="saveToolChanges()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Demo data for tools
+  const tools = [
+    { id: 1, toolName: "Server Backup", description: "Backup tool for server data" },
+    { id: 2, toolName: "Disk Cleanup", description: "Cleans up unused disk space" },
+    { id: 3, toolName: "System Monitor", description: "Monitors system performance" }
+  ];
+
+  // Display tools on load
+  function loadTools() {
+    const toolTable = document.getElementById('toolTable');
+    toolTable.innerHTML = "";
+    tools.forEach((tool, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${tool.toolName}</td>
+        <td>${tool.description}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" onclick="editTool(${tool.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-sm btn-danger" onclick="deleteTool(${tool.id})"><i class="fas fa-trash-alt"></i> Delete</button>
+        </td>
+      `;
+      toolTable.appendChild(row);
+    });
+  }
+
+  // Edit Tool
+  function editTool(id) {
+    const tool = tools.find(t => t.id === id);
+    document.getElementById('toolName').value = tool.toolName;
+    document.getElementById('toolDescription').value = tool.description;
+    $('#editToolModal').modal('show');
+  }
+
+  // Save Tool Changes
+  function saveToolChanges() {
+    const toolName = document.getElementById('toolName').value;
+    const toolDescription = document.getElementById('toolDescription').value;
+    const toolId = tools.findIndex(tool => tool.toolName === toolName);
+    if (toolId !== -1) {
+      tools[toolId] = { id: toolId + 1, toolName, description: toolDescription };
+      $('#editToolModal').modal('hide');
+      loadTools();
+    }
+  }
+
+  // Delete Tool
+  function deleteTool(id) {
+    const toolIndex = tools.findIndex(tool => tool.id === id);
+    if (toolIndex > -1) {
+      tools.splice(toolIndex, 1);
+      loadTools();
+    }
+  }
+
+  // Add Tool
+  function addTool() {
+    const newTool = { 
+      id: tools.length + 1, 
+      toolName: "New Tool", 
+      description: "Description of new tool" 
+    };
+    tools.push(newTool);
+    loadTools();
+  }
+
+  // Search Tool
+  function searchTool() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const filteredTools = tools.filter(tool => tool.toolName.toLowerCase().includes(searchInput));
+    
+    const toolTable = document.getElementById('toolTable');
+    toolTable.innerHTML = "";
+    filteredTools.forEach((tool, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${tool.toolName}</td>
+        <td>${tool.description}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" onclick="editTool(${tool.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-sm btn-danger" onclick="deleteTool(${tool.id})"><i class="fas fa-trash-alt"></i> Delete</button>
+        </td>
+      `;
+      toolTable.appendChild(row);
+    });
+  }
+
+  // Log out function
+  function logOut() {
+    alert("Logging out...");
+  }
+
+  // Load tools on page load
+  window.onload = loadTools;
+</script>
+
+<!-- Bootstrap JS and jQuery for modal functionality -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

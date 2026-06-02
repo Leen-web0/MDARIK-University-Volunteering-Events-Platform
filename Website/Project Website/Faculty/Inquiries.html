@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Inquiries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="Student_Inquiries.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+    </div>
+    <a href="../index.html"><i class="fas fa-home"></i> Home page</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="Event_Manage.html"><i class="fas fa-tachometer-alt"></i> Event Manage</a>
+    <a href="Courses_Manage.html"><i class="fas fa-ticket-alt"></i> Courses Manage</a>
+    <a href="Suggestion.html"><i class="fas fa-coins"></i> Suggestion</a>
+    <a href="Calendar.html"><i class="fas fa-chart-line"></i> Calendar</a>
+    <a href="Inquiries.html" class="active"><i class="fas fa-chart-line"></i>  Student Inquiries</a>
+   
+
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="topbar">
+      <h1>Student Inquiries</h1>
+      <a href="../index.html"><button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Log out</button></a>
+    </div>
+
+    <div class="container">
+      <!-- Inquiry List -->
+      <div class="inquiries-list">
+        <h3 class="form-title">Student Inquiries</h3>
+
+        <!-- Example Inquiry 1 -->
+        <div class="inquiry-card">
+          <div class="inquiry-header">
+            <h5>Inquiry Title 1</h5>
+            <span class="badge badge-warning">Pending</span>
+          </div>
+          <p><strong>Student:</strong> John Doe</p>
+          <p><strong>Content:</strong> I have a question about the syllabus. Can you clarify the topics covered in the next session?</p>
+          <p><strong>Date:</strong> 2025-04-19</p>
+          <button class="btn btn-info" data-toggle="collapse" data-target="#response1">Reply</button>
+          <div id="response1" class="collapse">
+            <div class="form-group">
+              <label for="response">Response:</label>
+              <textarea class="form-control" id="response" rows="3" placeholder="Write your response here..."></textarea>
+            </div>
+            <button class="btn btn-success"><i class="fas fa-paper-plane"></i> Send Response</button>
+          </div>
+        </div>
+
+        <!-- Example Inquiry 2 -->
+        <div class="inquiry-card">
+          <div class="inquiry-header">
+            <h5>Inquiry Title 2</h5>
+            <span class="badge badge-success">Reviewed</span>
+          </div>
+          <p><strong>Student:</strong> Jane Smith</p>
+          <p><strong>Content:</strong> How do I register for the upcoming course on Data Science? Please provide details.</p>
+          <p><strong>Date:</strong> 2025-04-18</p>
+          <button class="btn btn-info" data-toggle="collapse" data-target="#response2">Reply</button>
+          <div id="response2" class="collapse">
+            <div class="form-group">
+              <label for="response">Response:</label>
+              <textarea class="form-control" id="response" rows="3" placeholder="Write your response here..."></textarea>
+            </div>
+            <button class="btn btn-success"><i class="fas fa-paper-plane"></i> Send Response</button>
+          </div>
+        </div>
+
+        <!-- Example Inquiry 3 -->
+        <div class="inquiry-card">
+          <div class="inquiry-header">
+            <h5>Inquiry Title 3</h5>
+            <span class="badge badge-danger">Rejected</span>
+          </div>
+          <p><strong>Student:</strong> Emily Brown</p>
+          <p><strong>Content:</strong> I am facing technical issues with the course registration system. Please help me resolve it.</p>
+          <p><strong>Date:</strong> 2025-04-17</p>
+          <button class="btn btn-info" data-toggle="collapse" data-target="#response3">Reply</button>
+          <div id="response3" class="collapse">
+            <div class="form-group">
+              <label for="response">Response:</label>
+              <textarea class="form-control" id="response" rows="3" placeholder="Write your response here..."></textarea>
+            </div>
+            <button class="btn btn-success"><i class="fas fa-paper-plane"></i> Send Response</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Include JS for Bootstrap Collapse -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Faculty Dep - Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="profile.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Sidebar for Faculty Dep -->
+<div class="sidebar">
+  <div class="logo">
+    <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+  </div>
+  <a href="../index.html"><i class="fas fa-home"></i> Home page</a>
+  <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+   <a href="Courses_Manage.html"><i class="fas fa-ticket-alt"></i> Courses Manage</a>
+  <a href="Suggestion.html"><i class="fas fa-coins"></i> Suggestion</a>
+  <a href="Calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+  <a href="Notification.html"><i class="fas fa-bell"></i> Notification</a>
+  <a href="Inquiries.html"><i class="fas fa-chart-line"></i>  Student Inquiries</a>
+
+  <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+  <div class="topbar">
+    <h1>Faculty Department - Profile</h1>
+    <a href="../index.html"><button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Log out</button></a>
+  </div>
+
+  <div class="container">
+    <div class="profile-card">
+      <div class="profile-img">
+        <i class="fas fa-user-tie"></i>
+      </div>
+
+      <div class="info text-center">
+        <h3>Prof. Sarah Al-Faculty</h3>
+        <p>ID: FAC2025-012</p>
+        <p>Title: Head of Computer Science Department</p>
+        <p>Email: sarah.faculty@university.edu</p>
+        <p>Phone: +966 55 987 6543</p>
+      </div>
+
+      <div class="icon-stats d-flex justify-content-around text-center mt-4">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users fa-2x text-success"></i></div>
+          <div class="stat-number">24</div>
+          <div class="stat-label">Faculty Members</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-chalkboard-teacher fa-2x text-primary"></i></div>
+          <div class="stat-number">42</div>
+          <div class="stat-label">Courses Overseen</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-file-alt fa-2x text-warning"></i></div>
+          <div class="stat-number">8</div>
+          <div class="stat-label">Reports Submitted</div>
+        </div>
+      </div>
+
+      <div class="about mt-4">
+        <h4>About Me:</h4>
+        <p>I lead the Computer Science Faculty Department, overseeing course coordination, staff performance, and academic quality assurance. My focus is on fostering a collaborative environment and enhancing student outcomes through curriculum innovation and staff development.</p>
+      </div>
+
+      <div class="text-center mt-3">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#editProfileModal">
+          <i class="fas fa-edit"></i> Edit Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          
+         
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" value="sarah.faculty@university.edu">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" value="+966 55 987 6543">
+          </div>
+          <div class="form-group">
+            <label for="about">About Me</label>
+            <textarea class="form-control" id="about" rows="3">I lead the Computer Science Faculty Department, overseeing course coordination, staff performance, and academic quality assurance. My focus is on fostering a collaborative environment and enhancing student outcomes through curriculum innovation and staff development.</textarea>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

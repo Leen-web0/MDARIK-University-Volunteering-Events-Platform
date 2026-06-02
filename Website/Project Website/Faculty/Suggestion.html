@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Suggestion Manage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="Suggestion.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">
+    <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+  </div>
+  <a href="../index.html"><i class="fas fa-home"></i> Home page</a>
+  <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+  <a href="Event_Manage.html"><i class="fas fa-tachometer-alt"></i> Event Manage</a>
+  <a href="Courses_Manage.html"><i class="fas fa-ticket-alt"></i> Courses Manage</a>
+  <a href="Suggestion.html" class="active"><i class="fas fa-coins"></i> Suggestion</a>
+  <a href="Calendar.html"><i class="fas fa-chart-line"></i> Calendar</a>
+  <a href="Inquiries.html"><i class="fas fa-chart-line"></i>  Student Inquiries</a>
+
+  <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="topbar">
+    <h1>Suggestion Management</h1>
+    <a href="../index.html"><button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Log out</button></a>
+  </div>
+
+  <div class="container">
+    <div class="form-card">
+      <h3 class="form-title">Add New Suggestion</h3>
+      <form>
+        <div class="form-group">
+          <label for="suggestionTitle">Suggestion Title:</label>
+          <input type="text" class="form-control" id="suggestionTitle" placeholder="Enter suggestion title" required>
+        </div>
+        <div class="form-group">
+          <label for="suggestionContent">Suggestion Content:</label>
+          <textarea class="form-control" id="suggestionContent" rows="4" placeholder="Enter your suggestion..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <select class="form-control" id="status" required>
+            <option value="">Select status</option>
+            <option>Pending</option>
+            <option>Reviewed</option>
+            <option>Accepted</option>
+            <option>Rejected</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="createDate">Create Date:</label>
+          <input type="date" class="form-control" id="createDate" required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Submit Suggestion</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
