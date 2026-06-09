@@ -3,12 +3,10 @@
 <div align="center">
 
 [![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Site-2ea44f?style=for-the-badge)](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)
-[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717?style=for-the-badge&logo=github)](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)]()
-[![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)]()
-
-> 🎓 Graduation Project | King Saud University | 2025
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717?style=for-the-badge&logo=github)](https://github.com/Leen-web0/MDARIK-University-Volunteering-Events-Platform)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://github.com/Leen-web0/MDARIK-University-Volunteering-Events-Platform/blob/main/Database/mdark%20(3).sql)
 
 **[🚀 Click here to view the live website →](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)**
 
