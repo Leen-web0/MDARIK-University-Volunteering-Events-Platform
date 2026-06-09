@@ -1,5 +1,20 @@
 # MDARIK — University Volunteering & Events Platform
 
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Site-2ea44f?style=for-the-badge)](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717?style=for-the-badge&logo=github)](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)]()
+[![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)]()
+
+> 🎓 Graduation Project | King Saud University | 2025
+
+**[🚀 Click here to view the live website →](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)**
+
+</div>
+
+---
 > Graduation Project | King Saud University | 2025
 
 MDARIK is a university-based web platform that connects students, faculty, and community organizations through volunteering opportunities, training courses, and campus events. The system includes a public-facing website and a role-based management dashboard for multiple user types.
