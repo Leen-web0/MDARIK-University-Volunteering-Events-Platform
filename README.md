@@ -8,8 +8,11 @@
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
 [![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://github.com/Leen-web0/MDARIK-University-Volunteering-Events-Platform/blob/main/Database/mdark%20(3).sql)
 
-**[🚀 Click here to view the live website →](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)**
+## 🌐 Live Preview
 
+**[🚀 Click here to view the live website →](https://leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/)**
+<br>
+in any browser — no server required.
 </div>
 
 ---
@@ -21,9 +24,7 @@ MDARIK is a university-based web platform that connects students, faculty, and c
 <div align="center">
 <img src="https://i.pinimg.com/originals/6d/be/77/6dbe776fb412b0ade2600846d434c669.gif" alt="Workspace" width="70%"/>
 </div>
-## 🌐 Live Preview
 
-Open `Website/Project Website/index.html` in any browser — no server required.
 
 ---
 
