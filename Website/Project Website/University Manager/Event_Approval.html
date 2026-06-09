@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Approval</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="Event_Approval.css"/>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+    </div>
+   <a href="../index.html"><i class="fas fa-home"></i> Home page</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="Event_Approval.html" class="active"><i class="fas fa-ticket-alt"></i> Event Approval</a>
+    <a href="Budget_Manage.html"><i class="fas fa-coins"></i> Budget Manage</a>
+    <a href="Statistics_Analytics.html"><i class="fas fa-chart-line"></i> Statistics & Analytics</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <div class="topbar">
+      <h1>Event Approval</h1>
+      <button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Log out</button>
+    </div>
+
+    <div class="event-table">
+      <h4 class="mb-3">Pending Events for Approval</h4>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Event ID</th>
+              <th>Event Name</th>
+              <th>Organizer</th>
+              <th>Date</th>
+              <th>Venue</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EVT1001</td>
+              <td>AI Symposium 2025</td>
+              <td>Sarah Al-Organizer</td>
+              <td>2025-05-20</td>
+              <td>Auditorium A</td>
+              <td><span class="badge badge-warning">Pending</span></td>
+              <td>
+                <button class="btn btn-sm btn-approve"><i class="fas fa-check"></i> Approve</button>
+                <button class="btn btn-sm btn-reject"><i class="fas fa-times"></i> Reject</button>
+              </td>
+            </tr>
+            <tr>
+              <td>EVT1002</td>
+              <td>Robotics Workshop</td>
+              <td>Khalid Tech</td>
+              <td>2025-05-22</td>
+              <td>Lab Hall 2</td>
+              <td><span class="badge badge-warning">Pending</span></td>
+              <td>
+                <button class="btn btn-sm btn-approve"><i class="fas fa-check"></i> Approve</button>
+                <button class="btn btn-sm btn-reject"><i class="fas fa-times"></i> Reject</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

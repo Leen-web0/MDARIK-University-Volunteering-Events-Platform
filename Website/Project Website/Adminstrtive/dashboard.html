@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Administrative Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="dashboard.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">
+    <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+  </div>
+  <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+  <a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+  <a href="manage_proposals.html"><i class="fas fa-folder-open"></i> Manage Proposals</a>
+  <a href="certificate_management.html"><i class="fas fa-certificate"></i> Certificate Management</a>
+  <a href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+  <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+  <a href="help_support.html"><i class="fas fa-question-circle"></i> Help & Support</a>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+  <div class="topbar">
+    <h1>Administrative Dashboard</h1>
+    <button class="btn btn-danger btn-logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log out</button>
+  </div>
+  <div class="container">
+    <div class="row text-center justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="statistics-card">
+          <i class="fas fa-folder-open text-primary statistics-icon"></i>
+          <div class="text-left">
+            <h5>128</h5>
+            <p>Pending Proposals</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="statistics-card">
+          <i class="fas fa-certificate text-success statistics-icon"></i>
+          <div class="text-left">
+            <h5>86</h5>
+            <p>Certificates Issued</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="statistics-card">
+          <i class="fas fa-chart-bar text-warning statistics-icon"></i>
+          <div class="text-left">
+            <h5>34</h5>
+            <p>Reports Generated</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row chart-container">
+      <div class="col-md-6">
+        <h5 class="text-center">Proposal Status</h5>
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="col-md-6">
+        <h5 class="text-center">Monthly Certificate Issuance</h5>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chart Scripts -->
+<script>
+  // Pie Chart - Proposal Status
+  const pieCtx = document.getElementById('pieChart').getContext('2d');
+  new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Pending', 'Approved', 'Rejected'],
+      datasets: [{
+        label: 'Proposals',
+        data: [128, 89, 32],
+        backgroundColor: ['#007bff', '#28a745', '#dc3545']
+      }]
+    }
+  });
+
+  // Bar Chart - Certificate Issuance
+  const barCtx = document.getElementById('barChart').getContext('2d');
+  new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      datasets: [{
+        label: 'Certificates',
+        data: [12, 19, 25, 20, 35, 45],
+        backgroundColor: '#ffc107'
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+
+  // Logout function
+  function logout() {
+    if (confirm('Are you sure you want to log out?')) {
+      window.location.href = './index.html';
+    }
+  }
+</script>
+</body>
+</html>

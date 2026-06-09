@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reply to Tickets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="reply.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">
+    <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+  </div>
+  <a href="../index.html"><i class="fas fa-home"></i> Home page</a>
+  <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+  <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+  <a href="tickets.html"><i class="fas fa-ticket-alt"></i> Support Tickets</a>
+  <a href="reply.html" class="active"><i class="fas fa-reply"></i> Reply to Tickets</a>
+  <a href="reports.html"><i class="fas fa-file-alt"></i> User Reports</a>
+  <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="topbar">
+    <h1>Reply to Support Tickets</h1>
+    <button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Log out</button>
+  </div>
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title mb-4">Pending Support Requests</h4>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Request Date</th>
+              <th>User Message</th>
+              <th>Status</th>
+              <th>Reply</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>4/2/2025 12:00</td>
+              <td>Contact us at...</td>
+              <td><span class="badge badge-warning">Pending</span></td>
+              <td><button class="btn btn-sm reply-btn" data-toggle="modal" data-target="#replyModal" onclick="setReplyTicketId(1)"><i class="fas fa-reply"></i> Reply</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>4/3/2025 15:00</td>
+              <td>Tech team notified</td>
+              <td><span class="badge badge-warning">Pending</span></td>
+              <td><button class="btn btn-sm reply-btn" data-toggle="modal" data-target="#replyModal" onclick="setReplyTicketId(2)"><i class="fas fa-reply"></i> Reply</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="replyModalLabel">Reply to Ticket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="replyForm">
+          <div class="form-group">
+            <label for="ticketId">Ticket ID</label>
+            <input type="text" class="form-control" id="ticketId" disabled>
+          </div>
+          <div class="form-group">
+            <label for="replyMessage">Reply Message</label>
+            <textarea class="form-control" id="replyMessage" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Reply</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Function to set ticket ID into the modal
+  function setReplyTicketId(ticketId) {
+    document.getElementById('ticketId').value = ticketId;
+  }
+
+  // Handle form submission
+  document.getElementById('replyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const ticketId = document.getElementById('ticketId').value;
+    const replyMessage = document.getElementById('replyMessage').value;
+    
+    if (ticketId && replyMessage) {
+      alert(`Reply sent to ticket ID ${ticketId}: ${replyMessage}`);
+      $('#replyModal').modal('hide');
+      // Here you would normally send the reply to the server using AJAX or fetch
+    } else {
+      alert('Please enter a reply message');
+    }
+  });
+</script>
+
+</body>
+</html>

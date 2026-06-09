@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Status</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="Event_Status.css"/>
+  
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="img/Logo.png" alt="Logo" class="img-fluid" />
+    </div>
+    <a href="../index.html"><i class="fas fa-home"></i> Home page</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="Manage_Event.html"><i class="fas fa-tachometer-alt"></i> Manage Event</a>
+    <a href="attendance.html" ><i class="fas fa-users"></i> Attendance</a>
+
+    <a href="Event_Status.html" class="active" ><i class="fas fa-ticket-alt"></i> Event Status</a>
+    <a href="Notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+    <a href="Upload_Documents.html"><i class="fas fa-upload"></i> Upload Documents</a>
+    <a href="Reports.html"><i class="fas fa-file-alt"></i> Reports</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <div class="topbar">
+      <h1>Event Status</h1>
+      <button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Log out</button>
+    </div>
+
+    <div class="container">
+      <div class="event-table">
+        <h3 class="mb-4">Your Events</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th>Event Title</th>
+                <th>Organizer</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Number of registrants</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Environmental Campaign</td>
+                <td>Environment Club</td>
+                <td>2024-03-13</td>
+                <td><span class="badge badge-success">Published</span></td>
+                <td>12</td>
+                <td>
+                  <button class="btn btn-sm btn-primary edit-btn" data-toggle="modal" data-target="#editEventModal"
+                          data-title="Environmental Campaign" data-organizer="Environment Club" data-date="2024-03-13">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                  <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>AI Workshop</td>
+                <td>Tech Society</td>
+                <td>2024-04-10</td>
+                <td><span class="badge badge-warning">Draft</span></td>
+                <td>0</td>
+                <td>
+                  <button class="btn btn-sm btn-primary edit-btn" data-toggle="modal" data-target="#editEventModal"
+                          data-title="AI Workshop" data-organizer="Tech Society" data-date="2024-04-10">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                  <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>First Aid Training</td>
+                <td>Health Unit</td>
+                <td>2024-02-20</td>
+                <td><span class="badge badge-secondary">Closed</span></td>
+                <td>18</td>
+                <td>
+                  <button class="btn btn-sm btn-primary edit-btn" data-toggle="modal" data-target="#editEventModal"
+                          data-title="First Aid Training" data-organizer="Health Unit" data-date="2024-02-20">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                  <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="editEventModal" tabindex="-1" role="dialog" aria-labelledby="editEventModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form id="editEventForm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editEventModalLabel">Edit Event</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="eventTitle">Event Title</label>
+              <input type="text" class="form-control" id="eventTitle" name="eventTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="eventOrganizer">Organizer</label>
+              <input type="text" class="form-control" id="eventOrganizer" name="eventOrganizer" required>
+            </div>
+            <div class="form-group">
+              <label for="eventDate">Date</label>
+              <input type="date" class="form-control" id="eventDate" name="eventDate" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('.edit-btn').on('click', function () {
+      const title = $(this).data('title');
+      const organizer = $(this).data('organizer');
+      const date = $(this).data('date');
+
+      $('#eventTitle').val(title);
+      $('#eventOrganizer').val(organizer);
+      $('#eventDate').val(date);
+    });
+
+    $('#editEventForm').on('submit', function (e) {
+      e.preventDefault();
+      // Save logic here (can use AJAX or local state for simulation)
+      $('#editEventModal').modal('hide');
+      alert('Event updated successfully!');
+    });
+
+    $('#editEventModal').on('shown.bs.modal', function () {
+  $('.modal-backdrop').remove(); // يحذف العنصر الخلفي
+});
+
+  </script>
+
+</body>
+</html>
