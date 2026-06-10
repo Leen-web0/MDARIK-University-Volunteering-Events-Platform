@@ -16,6 +16,12 @@ in any browser — no server required.
 </div>
 
 ---
+<div align="center">
+<img src="https://i.pinimg.com/originals/6d/be/77/6dbe776fb412b0ade2600846d434c669.gif" alt="Workspace" width="70%"/>
+</div>
+
+
+---
 > Graduation Project | King Saud University | 2025
 
 MDARIK is a university-based web platform that connects students, faculty, and community organizations through volunteering opportunities, training courses, and campus events. The system includes a public-facing website and a role-based management dashboard for multiple user types.
