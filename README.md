@@ -20,94 +20,31 @@ in any browser — no server required.
 <img src="https://i.pinimg.com/originals/6d/be/77/6dbe776fb412b0ade2600846d434c669.gif" alt="Workspace" width="70%"/>
 </div>
 
-
 ---
+
 > Graduation Project | King Saud University | 2025
 
 MDARIK is a university-based web platform that connects students, faculty, and community organizations through volunteering opportunities, training courses, and campus events. The system includes a public-facing website and a role-based management dashboard for multiple user types.
 
-
 ---
 
-## 📁 Project Structure
+## 🖥️ Browse by Role — استعرض حسب الدور
 
-```
-MDARIK- 2025-2(1642)/
-│
-├── Website/
-│   └── Project Website/
-│       ├── index.html                  # Landing page
-│       ├── login.html                  # Login page
-│       ├── aboutus.html                # About the platform
-│       ├── contactus.html              # Contact page
-│       ├── Upcomingevents.html         # Public events listing
-│       ├── Volunteeropportunities.html # Public volunteer listings
-│       ├── Trainingcourses.html        # Public training courses
-│       │
-│       ├── student/                    # Student dashboard
-│       │   ├── available_opportunities.html
-│       │   ├── my_participation.html
-│       │   ├── certificates.html
-│       │   ├── notifications.html
-│       │   └── profile.html
-│       │
-│       ├── Adminstrtive/               # Administrative employee dashboard
-│       │   ├── dashboard.html
-│       │   ├── certificate_management.html
-│       │   ├── manage_proposals.html
-│       │   ├── reports.html
-│       │   └── profile.html
-│       │
-│       ├── Faculty/                    # Faculty dashboard
-│       │   ├── Courses_Manage.html
-│       │   ├── Calendar.html
-│       │   ├── Suggestion.html
-│       │   └── profile.html
-│       │
-│       ├── organizer/                  # Event organizer dashboard
-│       │   ├── Manage_Event.html
-│       │   ├── Event_Status.html
-│       │   ├── attendance.html
-│       │   └── profile.html
-│       │
-│       ├── University Manager/         # University director dashboard
-│       │   ├── dashboard.html
-│       │   ├── Event_Approval.html
-│       │   ├── Budget_Manage.html
-│       │   └── Statistics_Analytics.html
-│       │
-│       ├── IT/                         # IT department dashboard
-│       │   ├── usermanage.html
-│       │   ├── roles.html
-│       │   ├── maintenance.html
-│       │   └── View_Logs.html
-│       │
-│       └── Support/                    # Support team dashboard
-│           ├── dashboard.html
-│           ├── tickets.html
-│           ├── reply.html
-│           └── reports.html
-│
-├── Database/
-│   ├── mdark (3).sql                   # Full database schema & seed data
-│   ├── ERD-422 (3).drawio              # Entity-Relationship Diagram
-│   └── uml1.drawio                     # UML Class Diagram
-│
-├── Charts/
-│   ├── All diagrams used in thr project.drawio   # All system diagrams
-│   └── final_gantt_chart_with_end_dates.xlsx     # Project Gantt chart
-│
-├── Document/
-│   ├── MDARIK-all-ch-final.docx        # Full project documentation
-│   └── MDARIK-all-ch-final.pdf         # PDF version
-│
-├── Prototype/
-│   └── Figma design-final.pdf          # UI/UX Figma prototype export
-│
-└── Survey/
-    ├── S1.docx                          # Survey instrument (Word)
-    └── survey.pdf                       # Survey instrument (PDF)
-```
+> Click any profile link below to explore the full dashboard for each role.
+
+<div align="center">
+
+| # | Role | Profile Page |
+|---|------|-------------|
+| 1 | 🧑‍💼 **Administrative** | [→ View Profile](https://Leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/Website/Project%20Website/Adminstrtive/profile.html) |
+| 2 | 🎓 **Student** | [→ View Profile](https://Leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/Website/Project%20Website/student/profile.html) |
+| 3 | 👨‍🏫 **Faculty** | [→ View Profile](https://Leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/Website/Project%20Website/Faculty/profile.html) |
+| 4 | 🗂️ **Organizer** | [→ View Profile](https://Leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/Website/Project%20Website/organizer/profile.html) |
+| 5 | 💻 **IT Department** | [→ View Profile](https://Leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/Website/Project%20Website/IT/profile.html) |
+| 6 | 🏛️ **University Manager** | [→ View Profile](https://Leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/Website/Project%20Website/University%20Manager/profile.html) |
+| 7 | 🛎️ **Support** | [→ View Profile](https://Leen-web0.github.io/MDARIK-University-Volunteering-Events-Platform/Website/Project%20Website/Support/profile.html) |
+
+</div>
 
 ---
 
@@ -137,6 +74,50 @@ MDARIK- 2025-2(1642)/
 
 ---
 
+## 📁 Project Structure
+
+```
+MDARIK- 2025-2(1642)/
+│
+├── Website/
+│   └── Project Website/
+│       ├── index.html                  # Landing page
+│       ├── login.html                  # Login page
+│       ├── aboutus.html                # About the platform
+│       ├── contactus.html              # Contact page
+│       ├── Upcomingevents.html         # Public events listing
+│       ├── Volunteeropportunities.html # Public volunteer listings
+│       ├── Trainingcourses.html        # Public training courses
+│       │
+│       ├── student/                    # Student dashboard
+│       ├── Adminstrtive/               # Administrative employee dashboard
+│       ├── Faculty/                    # Faculty dashboard
+│       ├── organizer/                  # Event organizer dashboard
+│       ├── University Manager/         # University director dashboard
+│       ├── IT/                         # IT department dashboard
+│       └── Support/                    # Support team dashboard
+│
+├── Database/
+│   ├── mdark (3).sql                   # Full database schema & seed data
+│   ├── ERD-422 (3).drawio              # Entity-Relationship Diagram
+│   └── uml1.drawio                     # UML Class Diagram
+│
+├── Charts/
+│   └── All diagrams used in the project.drawio
+│
+├── Document/
+│   ├── MDARIK-all-ch-final.docx        # Full project documentation
+│   └── MDARIK-all-ch-final.pdf
+│
+├── Prototype/
+│   └── Figma design-final.pdf          # UI/UX Figma prototype export
+│
+└── Survey/
+    └── survey.pdf
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
@@ -162,7 +143,7 @@ USE mdark;
 SOURCE Database/mdark\ \(3\).sql;
 ```
 
-The ERD is available in `Database/ERD-422 (3).drawio` and as an SVG export alongside it.
+The ERD is available in `Database/ERD-422 (3).drawio`.
 
 ---
 
@@ -184,15 +165,8 @@ python3 -m http.server 8080
 
 ## 📊 System Diagrams
 
-All diagrams are located in the `Charts/` folder and editable in [draw.io](https://app.diagrams.net):
-
-- Context Diagram
-- DFD Level 0 & Level 1
-- Use Case Diagram
-- ERD
-- UML Class Diagram
-- Activity Diagrams (10 flows)
-- Sequence Diagrams (9 flows)
+All diagrams are in `Charts/` and editable in [draw.io](https://app.diagrams.net):
+Context Diagram · DFD Level 0 & 1 · Use Case Diagram · ERD · UML Class Diagram · Activity Diagrams (10) · Sequence Diagrams (9)
 
 ---
 
