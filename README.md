@@ -28,7 +28,7 @@ MDARIK is a university-based web platform that connects students, faculty, and c
 
 ---
 
-## 🖥️ Browse by Role — استعرض حسب الدور
+## 🖥️ Browse by Role — 
 
 > Click any profile link below to explore the full dashboard for each role.
 
