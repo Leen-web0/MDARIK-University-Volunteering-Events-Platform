@@ -172,10 +172,23 @@ Context Diagram · DFD Level 0 & 1 · Use Case Diagram · ERD · UML Class Diagr
 
 ## 👥 Team
 
-| Role | Description |
-|------|-------------|
-| Project Team | MDARIK Group — Semester 2025-2 (Group 1642) |
-| Institution | King Saud University |
+<div align="center">
+
+| 🏗️ | Name |
+|----|------|
+| 🌟 | **Leen Daghriri** |
+| 🎓 | **Abeer Alghazwani** |
+| 🤝 | **Rahaf Alamri** |
+| 💡 | **Enas Gser** |
+| 📋 | **Ruba Bashiri** |
+| 🎯 | **Raghad Hakami** |
+| 🔧 | **Amal Mashraqi** |
+| 📊 | **Raghad Qisi** |
+| 🏅 | **Renad Sahly** |
+
+</div>
+
+---
 
 ---
 
